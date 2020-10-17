@@ -7,14 +7,8 @@ var upperCase = ("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var nums = ("1", "2", "3", "4", "5", "6", "7", "8", "9");
 var specialChar = ["#","$","%","&","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","["];
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+var length = parseInt(prompt("How long do you want your password to be?"));
 
-  passwordText.value = password;
-
+if(length < 8 || length > 128){
+  alert("Your password is too short or too long!")
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
